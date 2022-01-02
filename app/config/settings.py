@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j)hs#zuh0(-09=oek_vzk)-3jjgfp#d9ks6b2x+0ssj%!i-nrl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,10 +38,13 @@ DEFAULT_APPS = [
     'django.contrib.staticfiles'
 ]
 CUSTOM_APPS = [
-    "core"
+    "core",
+    "store"
     
 ]
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    'rest_framework'
+]
 
 INSTALLED_APPS = [*DEFAULT_APPS, *CUSTOM_APPS, *THIRD_PARTY_APPS]
 
